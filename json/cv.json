@@ -10,23 +10,26 @@
                     "city": "Stockholm",
                     "time": "fulltime",
                     "startDate": "2026 08",
-                    "endDate": "Present"
+                    "endDate": "Present",
+                    "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 },
                 {
-                    "qualification": "Fullstack Developer",
+                    "qualification": "Fullstack Developer 2",
                     "educator": "Chas Academy",
                     "city": "Stockholm",
                     "time": "fulltime",
                     "startDate": "2026 08",
-                    "endDate": "Present"
+                    "endDate": "Present",
+                    "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 },
                 {
-                    "qualification": "Fullstack Developer",
+                    "qualification": "Fullstack Developer 3",
                     "educator": "Chas Academy",
                     "city": "Stockholm",
                     "time": "fulltime",
                     "startDate": "2026 08",
-                    "endDate": "Present"
+                    "endDate": "Present",
+                    "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 }
             ] 
         },
@@ -39,7 +42,8 @@
                     "city": "Stockholm",
                     "time": "in need",
                     "startDate": "2021 02",
-                    "endDate": "Present"
+                    "endDate": "Present",
+                    "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 },
                 {
                     "role": "Childcare Worker",
@@ -47,7 +51,8 @@
                     "city": "Stockholm",
                     "time": "in need",
                     "startDate": "2021 02",
-                    "endDate": "Present"
+                    "endDate": "Present",
+                    "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 },
                 {
                     "role": "Childcare Worker",
@@ -55,7 +60,8 @@
                     "city": "Stockholm",
                     "time": "in need",
                     "startDate": "2021 02",
-                    "endDate": "Present"
+                    "endDate": "Present",
+                    "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 }
             ] 
         }
