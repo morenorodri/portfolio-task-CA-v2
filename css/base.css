@@ -1,0 +1,408 @@
+:root {
+    /* color theme */
+    --surface:      #FFFFFF;
+
+    /* header/nav */
+    --header-con:   #F3F4F6; 
+    --nav-link:     #595966; /* #666666 */
+    --nav-button:   #595966;
+    --nav-menu:     #F3F4F6;
+    --foot-con:     #F3F4F6;
+    --foot-p:       #595966;
+
+    /* home */
+    --home-titel:   #42446E;
+    --pic-frame:    #076D99; /* #14B2F5  */
+
+    /* about */
+    --about-title:  #42446E;
+    --about-p:      #43434D;
+    --about-list:   #F3F4F6;
+    --ab-list-titel:#43434D;
+    --ab-list-p:    #F3F4F6; /* #3D3F66 */
+    --ab-list-ps:   #43434D; /* #A7A7A7 */
+    --ab-list-box:  #01660B; /* #D7FFE0 */
+    --ab-list-boxp: #F3F4F6; /* #161627 #018C0F */
+    --ab-list-bdr:  #076D99;
+    --ab-task-info: #076D99;
+
+    /* tech */
+    --tech-title:   #42446E;
+    --tech-p:       #43434D;
+    --tech-bframe:  #F3F4F6;
+
+    /* projects */
+    --project-title:#42446E;
+    --project-p:    #43434D;
+    --project-card: #F3F4F6;
+    --pr-card-title:#43434D; /* 000000 */
+    --pr-card-p:    #43434D;
+    --pr-card-foot: #43434D;
+    --pr-card-link: #43434D;
+
+    /* contact */
+    --contact-title: #42446E;
+    --contact-p:     #087DAF;
+
+}
+
+#theme-toggle:checked ~ * {
+    /* color theme */
+    --surface:      #101019 ;
+
+    /* header/nav */
+    --header-con:   #181825;
+    --nav-link:     #868699; 
+    --nav-button:   #595966;
+    --nav-menu:     #181825;
+    --foot-con:     #181825;
+    --foot-p:       #868699;
+
+    /* home */
+    --home-titel:   #F3F4F6;    
+
+    /* about */
+    --about-title:  #F3F4F6;
+    --about-p:      #868699;
+    --about-list:   #181825;
+    --ab-list-titel:#868699;
+    --ab-list-ps:   #858599;
+
+    /* tech */
+    --tech-title:   #F3F4F6;   
+    --tech-p:       #868699;
+    --tech-bframe:  #181825; 
+
+    /* project */
+    --project-title:#F3F4F6;
+    --project-p:    #868699;
+    --project-card: #181825;
+    --pr-card-title:#F3F4F6;
+    --pr-card-p:    #868699;
+    --pr-card-foot: #868699;
+    --pr-card-link: #F3F4F6;
+
+    /* contact */
+    --contact-title: #F3F4F6;
+    --contact-p:     #0A92CC;
+    
+
+    animation: showColors 0.5s ease;
+}
+
+@keyframes showColors {
+    from {
+        opacity: 0;
+    }
+}
+
+
+
+/* theme mode toggle */
+.toggle-label::after {
+    content: "";
+    width: 2rem; height: 2rem; 
+        background-image: url(/img/icon/moon-light-icon.svg);
+        background-size: cover;
+        background-position: center;
+}
+
+#theme-toggle:checked ~ * .toggle-label::after {
+    background-image: url(/img/icon/sun-icon.svg);
+}
+
+#theme-toggle {
+    display: none;
+}
+
+
+
+/* stop the animation and transition */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: 0ms !important;
+    transition: 0ms !important;
+  }
+}
+
+
+
+
+/*** 2. RESET ***/
+* {
+/* removes spaces that are already present on a newly opened web page */
+margin:     0;
+padding:    0;
+
+/* returns the actual content size, including padding, border, margin and etc */
+box-sizing: border-box;
+}
+
+/* removes the dot that comes with the list item by default */
+li, summary { list-style-type: none; }
+
+/* the images on the site is always wide as the parent-element */
+img { max-width: 100%; object-fit: cover; }
+
+/* removes the underline, which is the default. */
+a { text-decoration: none; }
+
+
+a:focus, button:focus, label:focus, details:focus {
+    outline: none;
+}  
+
+/* Keyboard navigation displays a clear outline */
+a:focus-visible, button:focus-visible, label:focus-visible, details:focus-visible {
+    border-radius: .25rem;
+    outline: .25rem solid var(--nav-link);
+    outline-offset: .5rem;
+}  
+
+
+
+
+
+/*** 3. ELEMENT ***/
+/* knowledge from the class */ /*
+html {
+    font-size: 62.5%; 1rem = 10px
+} 
+*/
+
+
+html {
+    scrollbar-gutter: stable;
+}
+
+
+body {
+        /* standard pack for the whole project */
+        font-family:        "Poppins", sans-serif;
+        font-size:          1rem;
+        font-weight:        300;
+        line-height:        1;
+        background-color:   #ffffff;
+
+
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100dvh;
+}
+
+
+
+/*** 4. SHARED BLOCK ***/
+header {
+        background-color: var(--header-con);
+        user-select: none;
+
+
+    .head-container {
+        display: flex;
+        column-gap: 1rem;
+        justify-content: end;
+        align-items: center;
+        padding: 1rem .5rem;
+        max-width: 64rem;
+        margin: 0 auto;
+    }
+
+
+    .header-toggle-box {
+        display: flex;
+        column-gap: 1rem;
+    }
+
+
+    .main-menu {
+        display: none;
+        column-gap: 1rem; 
+        align-items: center;
+    }
+
+    .nav-page-list {
+        display: flex;
+        column-gap: .25rem;
+    }
+
+    .nav-social-list {
+        display: flex;
+        column-gap: 1rem;
+    }
+
+
+    #drop-menu {
+        border: none;
+        width: 100%;
+        top: 4rem;
+            background-color: var(--nav-menu);
+            position: static;
+            opacity: 0;
+            transition: opacity 0.3s, overlay 0.3s allow-discrete, display 0.3s allow-discrete;
+    }
+
+    #drop-menu:popover-open {
+            opacity: 1;
+    }
+
+    .drop-social-list {
+        display: flex;
+        column-gap: 2rem;
+        justify-content: center;
+        padding: 2rem;
+    }
+}
+
+
+footer {
+        background-color: var(--foot-con);
+
+    .foot-container {
+        max-width: 64rem;
+        margin: 0 auto;
+        padding: 2rem .5rem;
+    }
+}
+
+
+
+
+/*** 5. FEATURING ***/
+/* paragraph */
+.foot-p {
+        font-weight: 400;
+        line-height: 1.25;
+        text-align: center;
+        color: var(--foot-p);
+}
+
+
+/* link */
+.drop-link { 
+    display: block;
+    padding: 1rem 0;
+        font-weight: 400;
+        text-align: center;
+        color: var(--nav-link);
+
+}
+
+.drop-link:hover {
+    color: #F3F4F6;
+    background-color: #076D99;
+}
+
+.nav-link { 
+    display: block;
+    padding: 1rem .5rem;
+    border-radius: .25rem;
+        font-weight: 400;
+        text-align: center;
+        color: var(--nav-link);
+    
+        transition: background-color 0.3s ease 0s;
+}
+
+.nav-link:hover {
+    color: #F3F4F6;
+    background-color: #076D99;
+}
+
+
+/* link image */
+.brand-link {
+    display: flex;
+    column-gap: .25rem;
+    align-items: center;
+    max-width: 2rem; max-height: 2rem;
+    margin-right: auto;
+    cursor: pointer;
+        
+    span {
+            font-weight: 500;
+            color: var(--nav-link);
+    }
+}
+
+
+/* buttons/img */
+.header-toggle-box button,
+.header-toggle-box label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    max-width: 2.5rem; max-height: 2.5rem;
+        background-color: var(--nav-button);
+
+    img {
+        aspect-ratio: 1/1;
+        max-width: 2rem; max-height: 2rem;
+    }
+}
+
+
+/* coder */
+.coder-mini-name {
+        background: linear-gradient(
+            45deg, #076D99, #009911
+        );
+        background-clip: text;
+        color: transparent;
+}
+
+
+
+
+
+/*** 6. RESPONSIVE ***/
+/* laptop */
+@media only screen and (min-width: 64rem) { 
+    header {
+
+        .head-container {
+            width: min(75%, 64rem);
+        }
+
+    }
+
+    footer {
+
+        .foot-container {
+            width: min(75%, 64rem);
+        }
+
+    }
+}
+
+
+/* tablet */
+@media only screen and (min-width: 48rem) {
+    header {
+
+        .main-menu {
+            display: flex;
+        }
+
+        .drop-none {
+            display: none;
+        }
+
+        #drop-menu {
+            display: none;
+        }
+
+    }
+}
+
+
+/* mobile */
+@media only screen and (min-width: 26.5625rem) {
+
+} 

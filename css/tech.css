@@ -1,0 +1,102 @@
+/*** 4. BLOCK ***/
+main {
+    padding: 4rem 0;
+        background-color: var(--surface);
+
+    .tech-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8em;
+        max-width: 64rem; 
+        margin: 0 auto;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        padding: 0 .5rem;
+    }
+
+    .tech-list {
+        display: flex;
+        gap: .5rem;
+        justify-content: start;
+        padding: 0 .5rem;
+        flex-wrap: wrap;
+    
+        li {
+            display: flex;
+            padding: .5rem;
+            border-radius: .25rem;
+            width: clamp(4.25rem, 15vw, 8.5rem);
+                background-color: var(--tech-bframe); 
+            
+            animation: showFrame 3s ease;
+        }
+    }
+    
+}
+
+@keyframes showFrame {
+    0% {
+        opacity: 0;
+    }
+}
+
+
+
+
+/*** 5. FEATURING ***/
+/* title */
+.tech-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        font-weight: 800;
+            text-align: center;
+            color: var(--tech-title);
+}
+
+/* paragraph */
+.tech-p {
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: center;
+        color: var(--tech-p);
+
+}
+
+
+
+
+/*** 6. RESPONSIVE ***/
+/* laptop */
+@media only screen and (min-width: 64rem) {
+    main {
+
+        .tech-container {
+            width: min(75%, 64rem);
+        }
+
+    }
+}
+
+
+/* tablet */
+@media only screen and (min-width: 48rem) {
+
+}
+
+
+/* mobile */
+@media only screen and (min-width: 26.5625rem) {
+    main {
+
+        .tech-title {
+            text-align: start;
+        }
+
+        .tech-p {
+            text-align: start;
+        }
+
+    }

@@ -1,0 +1,148 @@
+/*** 4. BLOCK ***/
+main {
+    padding: 4rem 0;
+        background-color: var(--surface);
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8em;            
+        max-width: 64rem;
+        margin: 0 auto;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        padding: 0 .5rem;
+    }
+    
+    .project-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+        column-gap: 1rem;
+        row-gap: 2rem;
+
+        li {
+            padding: 0 .5rem;
+        }
+    }
+}
+
+
+
+
+/*** 5. FEATURING ***/
+/* title */
+.project-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        font-weight: 800;
+            color: var(--project-title);
+}
+
+/* paragraph */
+.project-p {
+        font-weight: 500;
+        color: var(--project-p);
+
+}
+
+/* card */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    border-radius: 2rem;
+    overflow: hidden;
+        background-color: var(--project-card);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+
+        transform: translateY(0rem);
+        transition: transform 0.3s ease 0s;
+
+        animation: showCard 3s ease-out;
+
+    img {
+        aspect-ratio: 16/9;
+    }
+
+    .card-details {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        padding: 0 1rem 1rem;
+    
+        .card-title {
+                font-size: clamp(1.25rem, 5vw, 1.5rem);
+                color: var(--pr-card-title);
+        }
+
+        .card-p {
+                font-weight: 400;
+                line-height: 1.5;
+                 color: var(--pr-card-p);
+        }
+
+        .card-foot {
+            font-size: 1rem;
+            line-height: 1.5;
+                color: var(--pr-card-foot);
+        }
+    }
+
+    .card-links {
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem 0;
+
+        a {
+            display: flex;
+            column-gap: .5rem;
+                font-weight: 400;
+                color: var(--pr-card-link);
+        }
+
+        img {
+            width: 1rem; height: 1rem;
+        }
+    }
+}
+
+.project-card:hover {
+    transform: translateY(-1rem);
+}
+
+@keyframes showCard {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+}
+
+
+
+
+/*** 6. RESPONSIVE ***/
+/* laptop */
+@media only screen and (min-width: 64rem) {
+    main {
+
+        .project-container {
+            width: min(75%, 64rem);
+        }
+
+    }
+}
+
+
+/* tablet */
+@media only screen and (min-width: 48rem) {
+
+}
+
+
+/* mobile */
+@media only screen and (min-width: 26.5625rem) {
+
+}

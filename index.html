@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- font family pack from 'google fonts' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS files in order. consistent, specific and unique designs. -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+
+    <title> Portfolio Task </title>
+</head>
+<body>
+    
+    <!-- check the theme mode -->
+    <input type="checkbox" id="theme-toggle">
+
+    <header>
+        <div class="head-container">
+            <!-- brandname -->
+            <a href="/" class="brand-link">
+                <img src="./img/icon/code-dark-icon.svg" alt=""> 
+                <span> student </span> 
+            </a>
+
+            <!-- page categories links -->
+            <nav class="main-menu" aria-label="main navigation">
+                <ul class="nav-page-list">
+                    <li>
+                        <a href="./index.html" class="nav-link"> home </a>
+                    </li>         
+                    <li>
+                        <a href="./about.html" class="nav-link"> about me </a>
+                    </li>
+                    <li>
+                        <a href="./tech.html" class="nav-link"> tech stacks </a>
+                    </li>
+                    <li>
+                        <a href="./projects.html" class="nav-link"> projects </a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" class="nav-link"> contact </a>
+                    </li>
+                </ul>
+
+                <!-- social media image link -->
+                <ul class="nav-social-list">
+                    <li>
+                        <a href="#" aria-label="linkedin profile">
+                            <img src="./img/logo/linkedin-logo.svg" alt="" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="github profile">
+                            <img src="./img/logo/github-logo.svg" alt="" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="x profile">
+                            <img src="./img/logo/x-logo.svg" alt="" aria-hidden="true">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- toggle buttons -->
+            <div class="header-toggle-box">
+                <label for="theme-toggle" class="toggle-label" tabindex="0">
+                    <!-- toggle to dark/light mode  -->
+                </label>
+                <button class="drop-none" aria-label="toggle to open/close the dropmenu" popovertarget="drop-menu">
+                    <img src="./img/icon/menu-light-icon.svg" alt="" aria-hidden="true">
+                </button>
+            </div>
+        </div>
+
+
+        <!-- page categories links -->
+        <nav id="drop-menu" aria-label="main navigation" popover="auto">
+            <ul class="drop-page-list">
+                <li>
+                    <a href="./index.html" class="drop-link"> home </a>
+                </li>         
+                <li>
+                    <a href="./about.html" class="drop-link"> about me </a>
+                </li>
+                <li>
+                    <a href="./tech.html" class="drop-link"> tech stacks </a>
+                </li>
+                <li>
+                    <a href="./projects.html" class="drop-link"> projects </a>
+                </li>
+                <li>
+                    <a href="./contact.html" class="drop-link"> contact </a>
+                </li>
+            </ul>
+
+            <!-- social media image link -->
+            <ul class="drop-social-list">
+                <li>
+                    <a href="#" aria-label="linkedin profile">
+                        <img src="./img/logo/linkedin-logo.svg" alt="" aria-hidden="true">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="github profile">
+                        <img src="./img/logo/github-logo.svg" alt="" aria-hidden="true">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" aria-label="x profile">
+                        <img src="./img/logo/x-logo.svg" alt="" aria-hidden="true">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <main>
+        <div class="home-container">
+            <img src="./img/avatar.png" class="home-profile" alt="profile picture at work">
+            
+            <h1 class="home-headline">
+                Hi <span role="img" aria-label="waving hand">👋</span><br class="span-br">
+                My name is <br class="span-br">
+                <span class="coder-name"> Winfer Rodri Flor </span> <br class="span-br">
+                I build things for the web
+            </h1>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="foot-container">
+            <p class="foot-p"> 
+                Coded by <span class="coder-mini-name"> Winfer Rodri Flor </span> 
+                with great dedication, slurp slurp 🧉
+            </p>
+        </div>
+    </footer>
+    
+</body>
+</html>

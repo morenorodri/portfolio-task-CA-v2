@@ -1,0 +1,217 @@
+/*** 4. BLOCK ***/
+main {
+    padding: 4rem 0;
+        background-color: var(--surface);
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8em;
+        max-width: 64rem;
+        margin: 0 auto;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        padding: 0 .5rem;
+        max-width: 40rem;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        padding: 0 .5rem;
+        max-width: 40rem;
+
+        h1 {
+            padding: 0 .5rem;
+        }
+    }
+}
+
+
+
+
+/*** 5. FEATURING ***/
+/* title */
+.about-title, h2 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        font-weight: 800;
+            color: var(--about-title);
+}
+
+/* paragraph */
+.about-p {
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--about-p);
+
+}
+
+/* list */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+
+    .task {
+        block-size: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        border-bottom: .25rem solid var(--ab-list-ps);
+        border-radius: .5rem;
+        overflow: hidden;
+        height: auto;
+            background-color: var(--about-list);
+            
+       animation: showList 3s ease-out;
+    }
+
+    details::details-content {
+        opacity: 0;
+        height: 0;
+        transition: 
+            height .3s ease-out, 
+            opacity .3s ease-out, 
+            content-visibility .3s ease-out allow-discrete;
+    }
+
+    details[open]::details-content {
+        opacity: 1;
+        height: auto;
+    }
+
+    summary {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+            cursor: pointer;
+    }
+
+    .task-top {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        padding: 1rem 1rem;
+
+        .task-title {
+                font-size: clamp(1.25rem, 3vw, 1.5rem);
+                font-weight: 600;
+                color: var(--ab-list-titel);
+        }
+
+        .task-period {
+            padding: .5rem .75rem;
+            border-radius: .25rem;
+            width: fit-content;
+                font-size: 1rem;
+                font-weight: 400;
+                color: var(--ab-list-boxp);
+                background-color: var(--ab-list-box);
+        }
+    }
+
+    .task-details {
+        display: flex;
+        flex-direction: column;
+        row-gap: .5rem;
+        padding: 0 1rem;
+    }
+
+    .task-adress {
+        display: flex;
+        flex-direction: column;
+        row-gap: .5rem;
+
+        span {
+            display: flex;
+            column-gap: .25rem;
+            align-items: center;
+                color: var(--ab-list-ps);
+        }
+
+        img {
+            max-width: 1rem; max-height: 1rem;
+        }
+    }
+
+    .task-date {
+        display: flex;
+        column-gap: .25rem;
+        align-items: center;
+            color: var(--ab-list-ps);
+
+        img {
+            max-width: 1rem; max-height: 1rem;
+        }
+    }
+
+    .task-info {
+        padding: 1rem 1rem 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--ab-list-p);
+                background-color: var(--ab-task-info);
+    }
+}
+
+.task:hover {
+    outline: .1rem solid var(--ab-list-bdr);
+    outline-offset: .5rem;
+}
+
+@keyframes showList {
+    from {
+        opacity: 0;
+        transform: translateX(3rem);
+    }
+}
+
+
+
+
+/*** 6. RESPONSIVE ***/
+/* laptop */
+@media only screen and (min-width: 64rem) {
+    main {
+
+        .about-container {
+            width: min(75%, 64rem);
+        }
+
+    }
+}
+
+
+/* tablet */
+@media only screen and (min-width: 48rem) {
+
+}
+
+
+/* mobile */
+@media only screen and (min-width: 26.5625rem) {
+    .task-list {
+
+        .task-top {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-details {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .task-adress {
+            flex-direction: row;
+            column-gap: 1rem;
+        }
+
+    }
+}

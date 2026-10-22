@@ -1,0 +1,92 @@
+/*** 4. BLOCK ***/
+main {
+    padding: 4rem 0;
+        background-color: var(--surface);
+
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 64rem;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+
+/*** 5. FEATURING ***/
+/* title */
+.home-headline {
+        font-size: clamp(1.25rem, 5vw, 2.5rem);
+        font-weight: 800;
+        line-height: 1.25;
+            color: var(--home-titel);
+}
+
+
+/* coder */
+.coder-name {
+        background: linear-gradient(
+            45deg, #076D99, #009911
+        );
+        background-clip: text;
+        color: transparent;
+
+        animation: showName 6s ease-out;
+}
+
+@keyframes showName {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+}
+
+
+/* image */
+.home-profile {
+    border-radius: 50%;
+    width: clamp(12rem, 20vw, 16rem);
+    padding: clamp(.5rem, 1vw, 1rem);
+    background: linear-gradient(
+        -45deg, #076D99, #009911
+    );    
+}
+
+
+
+
+/*** 6. RESPONSIVE ***/
+/* laptop */
+@media only screen and (min-width: 64rem) {
+    main {
+ 
+        .home-container {
+            width: min(75%, 64rem);
+        }
+
+    }
+}
+
+
+/* tablet */
+@media only screen and (min-width: 48rem) {
+    main {
+
+        .home-container {
+            flex-direction: row;
+            column-gap: 2rem;
+        }
+
+    }
+}
+
+
+/* mobile */
+@media only screen and (min-width: 26.5625rem) {
+
+}
