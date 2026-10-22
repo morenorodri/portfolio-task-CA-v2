@@ -1,0 +1,63 @@
+{
+    "title": "Resume",
+    "category": [
+        {
+            "title": "Education",
+            "student": [
+                {
+                    "qualification": "Fullstack Developer",
+                    "educator": "Chas Academy",
+                    "city": "Stockholm",
+                    "time": "fulltime",
+                    "startDate": "2026 08",
+                    "endDate": "Present"
+                },
+                {
+                    "qualification": "Fullstack Developer",
+                    "educator": "Chas Academy",
+                    "city": "Stockholm",
+                    "time": "fulltime",
+                    "startDate": "2026 08",
+                    "endDate": "Present"
+                },
+                {
+                    "qualification": "Fullstack Developer",
+                    "educator": "Chas Academy",
+                    "city": "Stockholm",
+                    "time": "fulltime",
+                    "startDate": "2026 08",
+                    "endDate": "Present"
+                }
+            ] 
+        },
+        {
+            "title": "Experience",
+            "worker": [
+                {
+                    "role": "Childcare Worker",
+                    "workplace": "Norlandia Förskolor",
+                    "city": "Stockholm",
+                    "time": "in need",
+                    "startDate": "2021 02",
+                    "endDate": "Present"
+                },
+                {
+                    "role": "Childcare Worker",
+                    "workplace": "Norlandia Förskolor",
+                    "city": "Stockholm",
+                    "time": "in need",
+                    "startDate": "2021 02",
+                    "endDate": "Present"
+                },
+                {
+                    "role": "Childcare Worker",
+                    "workplace": "Norlandia Förskolor",
+                    "city": "Stockholm",
+                    "time": "in need",
+                    "startDate": "2021 02",
+                    "endDate": "Present"
+                }
+            ] 
+        }
+    ]
+}
