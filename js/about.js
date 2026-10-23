@@ -13,9 +13,21 @@ async function data() {
     pError.role = "alert";
     pError.style.textAlign = "center";
 
+    const pEmpty = document.createElement("p");
+    pError.classList.add("message");
+    pError.role = "status";
+    pError.style.textAlign = "center";
+
+    
     try {
         const respons = await fetch('json/cv.json');
         const data = await respons.json();
+
+        if (data.lenght === 0) {
+            pEmpty.textContent = "Den här användaren har inga publika repositories.";
+            ulParent.append(pEmpty);
+            return;
+        }
         
         const educationJson = data.category[0].student;
         const experienceJson = data.category[1].worker;

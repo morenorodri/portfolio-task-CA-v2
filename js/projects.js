@@ -12,6 +12,11 @@ async function getGithubUser() {
     pError.classList.add("error");
     pError.role = "alert";
     pError.style.textAlign = "center";
+
+    const pEmpty = document.createElement("p");
+    pError.classList.add("message");
+    pError.role = "status";
+    pError.style.textAlign = "center";
     
 
     try {
@@ -19,6 +24,12 @@ async function getGithubUser() {
         if (!response.ok) throw new Error("kunde inte hämta användare");
         const data = await response.json();
         const reversedData = data.toReversed();
+
+        if (data.lenght === 0) {
+            pEmpty.textContent = "Den här användaren har inga publika repositories.";
+            ulParent.append(pEmpty);
+            return;
+        }
 
         renderGithubData(reversedData);
 
