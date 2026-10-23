@@ -1,4 +1,20 @@
 async function getGithubUser() {
+    const ulParent = document.querySelector(".js-projectList");
+
+    const pLoading = document.createElement("p");
+    pLoading.classList.add("loading");
+    pLoading.textContent = "Laddar repositories... ⏳";
+    pLoading.role = "status";
+    pLoading.style.textAlign = "center";
+    ulParent.append(pLoading);
+
+    const pError = document.createElement("p");
+    pError.classList.add("error");
+    pError.role = "alert";
+    pError.style.textAlign = "center";
+
+    console.log(pLoading);
+
     try {
         const response = await fetch("https://api.github.com/users/morenorodri/repos");
         if (!response.ok) throw new Error("kunde inte hämta användare");
@@ -9,6 +25,12 @@ async function getGithubUser() {
 
     } catch (error) {
         console.error("Ett fel uppstod:", error);
+        pError.innerHTML = `Ett fel uppstod: ${error}`;
+        ulParent.append(pError);
+        
+
+    } finally {
+        pLoading.style.display = "none";
     }
 }
 getGithubUser()
