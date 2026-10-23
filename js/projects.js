@@ -12,8 +12,7 @@ async function getGithubUser() {
     pError.classList.add("error");
     pError.role = "alert";
     pError.style.textAlign = "center";
-
-    console.log(pLoading);
+    
 
     try {
         const response = await fetch("https://api.github.com/users/morenorodri/repos");

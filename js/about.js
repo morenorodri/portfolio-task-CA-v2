@@ -1,4 +1,18 @@
 async function data() {
+    const ulParent = document.querySelector(".js-edu-taskList");
+
+    const pLoading = document.createElement("p");
+    pLoading.classList.add("loading");
+    pLoading.textContent = "Laddar repositories... ⏳";
+    pLoading.role = "status";
+    pLoading.style.textAlign = "center";
+    ulParent.append(pLoading);
+
+    const pError = document.createElement("p");
+    pError.classList.add("error");
+    pError.role = "alert";
+    pError.style.textAlign = "center";
+
     try {
         const respons = await fetch('json/cv.json');
         const data = await respons.json();
@@ -10,7 +24,13 @@ async function data() {
         renderExperienceList(experienceJson);
     
     } catch (error) {
-        console.error("kunde inte hämta filen", error)
+        console.error("Ett fel uppstod", error)
+
+        pError.innerHTML = `Ett fel uppstod: ${error}`;
+        ulParent.append(pError);
+
+    } finally {
+        pLoading.style.display = "none";
     }
 }
 data()
