@@ -85,14 +85,13 @@
     /* contact */
     --contact-title: #F3F4F6;
     --contact-p:     #0A92CC;
-    
 
-    animation: showColors 0.5s ease;
+    animation: showColors .1s ease;
 }
 
 @keyframes showColors {
     from {
-        opacity: 0;
+        opacity: 1;
     }
 }
 
