@@ -94,8 +94,5 @@ function renderExperienceList(data) {
         }
 
         ulParent.appendChild(liChild);
-        console.log(liChild);
     });
-
-    console.log(data);
 }
