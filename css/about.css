@@ -183,7 +183,13 @@ main {
             width: min(75%, 64rem);
         }
 
-    }
+        article {
+            padding: 0 0rem;
+        }
+
+        section {
+            padding: 0 0rem;
+        }
 }
 
 

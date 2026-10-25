@@ -17,5 +17,3 @@ toggleTheme.addEventListener("change", (event) => {
         localStorage.setItem('theme', 'light');
     }
 });
-
-console.log(toggleTheme);

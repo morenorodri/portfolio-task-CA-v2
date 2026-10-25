@@ -77,6 +77,14 @@ main {
             width: min(75%, 64rem);
         }
 
+        article {
+            padding: 0 0rem;
+        }
+
+        .tech-list {
+            padding: 0 0rem;
+        }
+
     }
 }
 

@@ -21,12 +21,9 @@ main {
     .project-list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-        column-gap: 1rem;
+        column-gap: 2rem;
         row-gap: 2rem;
-
-        li {
-            padding: 0 .5rem;
-        }
+        padding: 0rem .5rem;
     }
 }
 
@@ -54,6 +51,7 @@ main {
     flex-direction: column;
     row-gap: 1.5rem;
     border-radius: 2rem;
+    height: 100%;
     overflow: hidden;
         background-color: var(--project-card);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
@@ -62,6 +60,7 @@ main {
         transition: transform 0.3s ease 0s;
 
         animation: showCard 3s ease-out;
+
 
     img {
         aspect-ratio: 16/9;
@@ -72,6 +71,7 @@ main {
         flex-direction: column;
         row-gap: 1rem;
         padding: 0 1rem 1rem;
+        height: 100%;
     
         .card-title {
                 font-size: clamp(1.25rem, 5vw, 1.5rem);
@@ -93,8 +93,9 @@ main {
 
     .card-links {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; 
         padding: .5rem 0;
+        margin-top: auto;
 
         a {
             display: flex;
@@ -130,6 +131,14 @@ main {
 
         .project-container {
             width: min(75%, 64rem);
+        }
+
+        article {
+            padding: 0 0rem;
+        }
+        
+        .project-list {
+            padding: 0 0rem;
         }
 
     }

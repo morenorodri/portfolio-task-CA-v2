@@ -366,6 +366,7 @@ footer {
     header {
 
         .head-container {
+            padding: 1rem 0rem;
             width: min(75%, 64rem);
         }
 
