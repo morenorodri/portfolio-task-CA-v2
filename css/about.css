@@ -189,12 +189,6 @@ main {
 
 /* tablet */
 @media only screen and (min-width: 48rem) {
-
-}
-
-
-/* mobile */
-@media only screen and (min-width: 26.5625rem) {
     .task-list {
 
         .task-top {
@@ -214,4 +208,10 @@ main {
         }
 
     }
+}
+
+
+/* mobile */
+@media only screen and (min-width: 26.5625rem) {
+
 }
