@@ -96,7 +96,6 @@
 }
 
 
-
 /* theme mode toggle */
 .toggle-label::after {
     content: "";
@@ -183,7 +182,7 @@ body {
         font-size:          1rem;
         font-weight:        300;
         line-height:        1;
-        background-color:   #ffffff;
+        background-color:   var(--surface);
 
 
         display: grid;
