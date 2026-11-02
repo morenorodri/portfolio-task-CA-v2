@@ -1,0 +1,51 @@
+{
+    "title": "techstacks",
+    "stack": {
+        "srcLink": "./img/logo/html-logo.svg",
+        "altText": "html"
+    },
+    {
+        "srcLink": "./img/logo/css-logo.svg",
+        "altText": "css"
+    },
+    {
+        "srcLink": "./img/logo/javascript-logo.svg",
+        "altText": "javascript"
+    },
+    {
+        "srcLink": "./img/logo/react-logo.svg",
+        "altText": "react"
+    },
+    {
+        "srcLink": "./img/logo/vscode-logo.svg",
+        "altText": "vscode"
+    },
+    {
+        "srcLink": "./img/logo/github-b-logo.svg",
+        "altText": "github"
+    },
+    {
+        "srcLink": "./img/logo/sass-logo.svg",
+        "altText": "sass"
+    },
+    {
+        "srcLink": "./img/logo/tailwind-logo.svg",
+        "altText": "tailwind"
+    },
+    {
+        "srcLink": "./img/logo/bootstrap-logo.svg",
+        "altText": "bootstrap"
+    },
+    {
+        "srcLink": "./img/logo/git-logo.svg",
+        "altText": "git"
+    },
+    {
+        "srcLink": "./img/logo/greensock-logo.svg",
+        "altText": "greensock"
+    },
+    {
+        "srcLink": "./img/logo/unknown-logo.svg",
+        "altText": "unknown"
+    }
+}
