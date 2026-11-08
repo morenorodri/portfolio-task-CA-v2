@@ -31,8 +31,16 @@ main {
             border-radius: .25rem;
             width: clamp(4.25rem, 15vw, 8.5rem);
                 background-color: var(--tech-bframe); 
-            
-            animation: showFrame 3s ease;
+                user-select: none;
+                cursor: crosshair;
+
+                transition: background-color .3s ease-in-out;
+                animation: showFrame 3s ease;
+
+            &:hover {
+                background-color: var(--tech-scoop);
+                transition: background-color .3s ease-in-out;
+            }
         }
     }
     
