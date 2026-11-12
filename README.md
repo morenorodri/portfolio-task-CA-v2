@@ -36,8 +36,20 @@ Dessa två variablar behöver jag sättas ihop med hjälp av `append()` så att 
 Tycker om att skriva fram HTML-strukturen. Det är smidigt att skapa fram "barnet" och fiska fram "föräldern". Jag har lätt översikt på HTML-innehållet och läsbarheten är tydligt.
 
 # Markup du inte skrivit för hand
+Bortsett att skriva självaste `HTML` strukturen för tydlig översikt och enklare förståelse för vad varje element har för syfte. Har jag också använt byggblockar som bildar ett element, sparat i ett variabel. Den element sparat i variabeln använder jag för att lägga till olika attributer som den annars skulle haft i ett skrivet element.
+
+För `project` sidan har jag skapa fram olika `p`-element med hjälp av `createElement()` för varje situation som uppstår vid upphämtning av data. Dessa elementer får framförallt olika attribute `role` typer och olika `class` namn men bär på likadana färger på text vid uppvisning på surfsidan. 
+
+För att skifta mellan samma element utifrån utgångspunkt med olika syfte, valde jag använda att `DOM`-skapa dessa element. I detta fall är dessa elementer korta och enkla tagg element.
+
 
 # Temaväxlingen 
+I tidigare U01 hade jag tema växling med hjälp av metoden `input:checked`. Jag behövde använda `visibility: hidden` för att dölja `input` för användaren och koppla den till en `label` med `type: button` för att omväxla tema genom att kolla igenom om checkbox var sann. Om det var sann så las det till en `dark theme` på `body` i `DOM`. 
+
+Nu i U02 behövde jag ändra `label`-knappen till en tillämplig `button`-knapp för rätt semantik och tillgänglighet. Tema växlingen sker nu efter tillståndet på attributes värde i `aria-pressed`. Om värde är `true` ändras det till `dark theme`. 
+
+Jag föredrar att använda `button` då temaväxlingen kan ändras geonom ett `enter` knapptryck när användaren tabb-navigerar sidan. Den första tema lösningen var för att utmana mig, lägga till något extra och bara ser 'hur sidan hade sett ut med ett tema växling', byggt med enbart HTML och CSS.
+
 
 # När det inte går som tänkt 
 
