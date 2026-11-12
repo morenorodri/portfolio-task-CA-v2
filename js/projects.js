@@ -27,8 +27,10 @@ async function getGithubUser() {
         const data = await response.json();
         const reversedData = data.toReversed();
 
+        console.log(response);
+
         if (data.lenght === 0) {
-            pEmpty.textContent = "This user has no public repositories";
+            pEmpty.textContent = "This user has no repositories";
             return;
         }
 
