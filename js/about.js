@@ -24,7 +24,7 @@ async function data() {
         const data = await respons.json();
 
         if (data.lenght === 0) {
-            pEmpty.textContent = "Den här användaren har inga publika repositories.";
+            pEmpty.textContent = "could not retrieve user data";
             ulParent.append(pEmpty);
             return;
         }
@@ -37,9 +37,9 @@ async function data() {
         renderExperienceList(experienceJson);
     
     } catch (error) {
-        console.error("Ett fel uppstod", error)
+        console.error("An error occurred:", error)
 
-        pError.innerHTML = `Ett fel uppstod: ${error}`;
+        pError.innerHTML = `An error occurred:: ${error}`;
         ulParent.append(pError);
 
     } finally {
