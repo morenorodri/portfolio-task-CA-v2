@@ -47,7 +47,7 @@
 
 }
 
-#theme-toggle:checked ~ * {
+.dark-theme {
     /* color theme */
     --surface:      #101019 ;
 

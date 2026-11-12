@@ -1,13 +1,14 @@
+const ulParent = document.querySelector(".js-projectList");
+const pLoading = document.createElement("p");
+pLoading.classList.add("loading");
+pLoading.textContent = "Laddar repositories... ⏳";
+pLoading.role = "status";
+pLoading.style.textAlign = "center";
+ulParent.append(pLoading);
+
+setTimeout(getGithubUser, 1000)
+
 async function getGithubUser() {
-    const ulParent = document.querySelector(".js-projectList");
-
-    const pLoading = document.createElement("p");
-    pLoading.classList.add("loading");
-    pLoading.textContent = "Laddar repositories... ⏳";
-    pLoading.role = "status";
-    pLoading.style.textAlign = "center";
-    ulParent.append(pLoading);
-
     const pError = document.createElement("p");
     pError.classList.add("error");
     pError.role = "alert";
@@ -27,7 +28,6 @@ async function getGithubUser() {
 
         if (data.lenght === 0) {
             pEmpty.textContent = "Den här användaren har inga publika repositories.";
-            ulParent.append(pEmpty);
             return;
         }
 
@@ -43,7 +43,6 @@ async function getGithubUser() {
         pLoading.style.display = "none";
     }
 }
-getGithubUser()
 
 
 

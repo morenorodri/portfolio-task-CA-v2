@@ -14,21 +14,21 @@
                     "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 },
                 {
-                    "qualification": "Fullstack Developer 2",
-                    "educator": "Chas Academy",
+                    "qualification": "Preschool Assistant",
+                    "educator": "Åsö Vuxenutbildning",
                     "city": "Stockholm",
                     "time": "fulltime",
-                    "startDate": "2026 08",
-                    "endDate": "Present",
+                    "startDate": "2021 10",
+                    "endDate": "2023 03",
                     "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 },
                 {
-                    "qualification": "Fullstack Developer 3",
-                    "educator": "Chas Academy",
+                    "qualification": "Frontend Developer",
+                    "educator": "EC Utbildning",
                     "city": "Stockholm",
                     "time": "fulltime",
-                    "startDate": "2026 08",
-                    "endDate": "Present",
+                    "startDate": "2019-08",
+                    "endDate": "2020-05",
                     "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 }
             ] 
@@ -37,30 +37,30 @@
             "title": "Experience",
             "worker": [
                 {
-                    "role": "Childcare Worker",
+                    "role": "Preschool Assistant",
                     "workplace": "Norlandia Förskolor",
                     "city": "Stockholm",
                     "time": "in need",
-                    "startDate": "2021 02",
+                    "startDate": "2023 03",
                     "endDate": "Present",
                     "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 },
                 {
-                    "role": "Childcare Worker",
-                    "workplace": "Norlandia Förskolor",
+                    "role": "Run Leader",
+                    "workplace": "Löparakademin",
                     "city": "Stockholm",
                     "time": "in need",
-                    "startDate": "2021 02",
-                    "endDate": "Present",
+                    "startDate": "2023 02",
+                    "endDate": "2023-05",
                     "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 },
                 {
-                    "role": "Childcare Worker",
-                    "workplace": "Norlandia Förskolor",
+                    "role": "Warehouse Operative",
+                    "workplace": "Storesupport",
                     "city": "Stockholm",
                     "time": "in need",
-                    "startDate": "2021 02",
-                    "endDate": "Present",
+                    "startDate": "2019 08",
+                    "endDate": "2021 03",
                     "letter": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia temporibus quaerat cumque labore iste consequatur laboriosam hic inventore in iusto, facilis odit nisi modi voluptates magnam amet rem distinctio tempora."
                 }
             ] 
