@@ -7,12 +7,11 @@ async function fetchStackData() {
         renderStackData(stackData);
         
     } catch (error) {
-        
-    } finally {
-
-    }
+        console.error("An error occurred:", error);
+    } 
 }
 fetchStackData()
+
 
 
 let copyStackData = [];
@@ -44,6 +43,7 @@ function renderStackData(stackData) {
         });
     });
 };
+
 
 
 function popStack(copyStackData, itemId) {

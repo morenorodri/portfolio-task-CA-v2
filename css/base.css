@@ -97,7 +97,8 @@
 }
 
 
-/* theme mode toggle */
+
+theme mode toggle
 .toggle-label::after {
     content: "";
     width: 2rem; height: 2rem; 

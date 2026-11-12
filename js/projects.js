@@ -1,7 +1,8 @@
 const ulParent = document.querySelector(".js-projectList");
+// creating various states for css and html 
 const pLoading = document.createElement("p");
 pLoading.classList.add("loading");
-pLoading.textContent = "Laddar repositories... ⏳";
+pLoading.textContent = "Loading repositories... ⏳";
 pLoading.role = "status";
 pLoading.style.textAlign = "center";
 ulParent.append(pLoading);
@@ -22,20 +23,20 @@ async function getGithubUser() {
 
     try {
         const response = await fetch("https://api.github.com/users/morenorodri/repos");
-        if (!response.ok) throw new Error("kunde inte hämta användare");
+        if (!response.ok) throw new Error("could not retrieve user repositories");
         const data = await response.json();
         const reversedData = data.toReversed();
 
         if (data.lenght === 0) {
-            pEmpty.textContent = "Den här användaren har inga publika repositories.";
+            pEmpty.textContent = "This user has no public repositories";
             return;
         }
 
         renderGithubData(reversedData);
 
     } catch (error) {
-        console.error("Ett fel uppstod:", error);
-        pError.innerHTML = `Ett fel uppstod: ${error}`;
+        console.error("An error occurred:", error);
+        pError.innerHTML = `An error occurred: ${error}`;
         ulParent.append(pError);
         
 

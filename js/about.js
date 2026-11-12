@@ -1,6 +1,6 @@
 async function data() {
     const ulParent = document.querySelector(".js-edu-taskList");
-
+    // creating various states for css and html 
     const pLoading = document.createElement("p");
     pLoading.classList.add("loading");
     pLoading.textContent = "Laddar repositories... ⏳";
@@ -29,6 +29,7 @@ async function data() {
             return;
         }
         
+        // getting and saving the necessary data in variable
         const educationJson = data.category[0].student;
         const experienceJson = data.category[1].worker;
 

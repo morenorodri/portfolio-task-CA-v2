@@ -2,10 +2,6 @@
 const themeToggle = document.querySelector(".js-themeToggle"); 
 const savedTheme = localStorage.getItem("theme");
 
-if (savedTheme === "dark") {
-    setDarkTheme();
-}
-
 
 // evenets
 themeToggle.addEventListener("click", () => {
@@ -26,6 +22,12 @@ function toggleTheme() {
     }
 }
 
+
+// checking in localStorage saved dark theme 
+if (savedTheme === "dark") {
+    setDarkTheme();
+}
+
 function setDarkTheme() {
     themeToggle.setAttribute("aria-pressed", true);
     document.body.classList.add("dark-theme");
@@ -39,6 +41,7 @@ function setLightTheme() {
     themeToggle.innerHTML = `<img src="./img/icon/moon-light-icon.svg" alt="a moon for dark mode switch"> `;   
     localStorage.setItem('theme', 'light'); 
 }
+
 
 
 // the before setting toggle in U01

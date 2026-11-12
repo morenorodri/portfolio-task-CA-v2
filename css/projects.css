@@ -121,6 +121,9 @@ main {
     }
 }
 
+.loading, .error, .message {
+        color: #868699;
+}
 
 
 
