@@ -17,10 +17,23 @@ På `about` sidan uppvisas data som är sparade intern i ett `JSON`-fil som jag 
 
 Medan på `project` sidan hämtas data från ett extern databas `API` och jag har mindre kontroll att hantera ändringar.
 
-I princip är kodstukturen mycket lika varadra och hanteras på simulär sätt samt förvänta mig få datan i `JSON`-format i slutligen. Olika meddelande uppvisas åt användare beroende på situationen vid upphämtningen. I självaste länken som sätts in i `fetch()` funktionen, inkluderar en `https://api`-benämning som visar att detta handlar om något som ligger ute på webben.  
+I princip är kodstukturen mycket lika varadra och hanteras på simulär sätt samt förväntar mig få datan i `JSON`-format i slutändan. Detta struktur fungerar bra och jag behöver inte använda av annat sätt att hantera datahämtningen. 
+
+Det rendera fram olika meddelande åt användare beroende på situationen vid upphämtningen. I självaste länken som sätts in i `fetch()` funktionen, inkluderar en `https://api`-benämning i det ena. Det visar tydligt att det handlar om en upphämtningen från nätet.  
 
 
 # DOM och Händelser 
+När specifik data är hämtad och sparade. Skickas den data vidare till en renderare via ett `function` där datan lagras i dess parameter. Tanken är att visa datan åt användaren och skapa ett/flera elementer. 
+
+För att få fram specifika innehåll från funktionens parameter. Går parameten igenom en `forEach()` funktion som radar upp de innehåll som finns i och hämtar varje egenskap en gång åt gången.
+
+Innnanför `forEach()` funktionen kan jag skapa ett element med hjälp av `createElement("li")`. På `li`-elementet skriver jag själv ett `HTML`-innehåll som skapar fram ett större element och i den placeras det särskilda data-egenskaper som kommer ur parametern som i verkligheten är en `object` och behöver skala ner innanför ett `${..}` för nå rätt egenskap.
+
+När de `li`-elementerna med rätt objekt-egenskaper är klara. Behövs hitta rätt anhängare åt `li`-elementer. Jag lyssnar in efter en speciellt `lu`-element i `DOM:en` och sparar den som "förälder"-variabel åt `li`-elementerna som är sparade i ett "barn"-variabel.
+
+Dessa två variablar behöver jag sättas ihop med hjälp av `append()` så att användaren på `about` och `project` sidan se data-innehållet.
+
+Tycker om att skriva fram HTML-strukturen. Det är smidigt att skapa fram "barnet" och fiska fram "föräldern". Jag har lätt översikt på HTML-innehållet och läsbarheten är tydligt.
 
 # Markup du inte skrivit för hand
 
