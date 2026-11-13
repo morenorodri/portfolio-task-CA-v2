@@ -44,14 +44,20 @@ För att skifta mellan samma element utifrån utgångspunkt med olika syfte, val
 
 
 # Temaväxlingen 
-I tidigare U01 hade jag tema växling med hjälp av metoden `input:checked`. Jag behövde använda `visibility: hidden` för att dölja `input` för användaren och koppla den till en `label` med `type: button` för att omväxla tema genom att kolla igenom om checkbox var sann. Om det var sann så las det till en `dark theme` på `body` i `DOM`. 
+I tidigare U01 hade jag tema växling med hjälp av metoden `input:checked`. Jag behövde använda `visibility: hidden` för att dölja `input` för användaren. Koppla den till en `label` med `type: button` för att temaväxla genom att kolla in om checkboxen var sann. Om det var sann så las det till en `dark theme` på `body` i `DOM`. 
 
-Nu i U02 behövde jag ändra `label`-knappen till en tillämplig `button`-knapp för rätt semantik och tillgänglighet. Tema växlingen sker nu efter tillståndet på attributes värde i `aria-pressed`. Om värde är `true` ändras det till `dark theme`. 
+Nu i U02 valde jag ändra `label`-knappen till en tillämplig `button`-knapp för rätt semantik och tillgänglighet. Tema växlingen sker nu efter tillståndet på attributes värde i `aria-pressed`. Om värde är `true` ändras det till `dark theme`. 
 
 Jag föredrar att använda `button` då temaväxlingen kan ändras geonom ett `enter` knapptryck när användaren tabb-navigerar sidan. Den första tema lösningen var för att utmana mig, lägga till något extra och bara ser 'hur sidan hade sett ut med ett tema växling', byggt med enbart HTML och CSS.
 
 
 # När det inte går som tänkt 
+Eftersom jag använder en `API` länk för att hämta data från ett extern databas. Kan svaret retuneras olika ut och den nås genom att använda `console.log()` på den variabel där jag lagrar responsen i. Men hur kan jag göra så att användaren får den information. Jag manipulerar `DOM` och renderar fram en tydlig meddelande åt användaren om vad som uppstått.
+
+Om användaren behöver vänta på att hemsidan ska uppdateras, möts användaren av texten som informerar att laddning pågår med en laddnings icon. Text elementet har olika `role` och `class`-namn beroende på vad tillståndet är. Exempelvis har jag skapat för `laddning` för väntetiden, `error` då datan inte kunde hämtas rätt och `empty` när min repositories är tom på GitHub.
+
+Det är trevligare användarupplevelse om användaren blir upplyst om processen. Det visar att besökaren är en viktig klient och kan därmed välja besöka hemsidan återigen för att kolla in läget.
+
 
 # Styrkor och brister
 

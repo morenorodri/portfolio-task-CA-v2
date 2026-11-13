@@ -7,7 +7,7 @@ pLoading.role = "status";
 pLoading.style.textAlign = "center";
 ulParent.append(pLoading);
 
-setTimeout(getGithubUser, 1000)
+setTimeout(getGithubUser, 500);
 
 async function getGithubUser() {
     const pError = document.createElement("p");
@@ -16,9 +16,9 @@ async function getGithubUser() {
     pError.style.textAlign = "center";
 
     const pEmpty = document.createElement("p");
-    pError.classList.add("message");
-    pError.role = "status";
-    pError.style.textAlign = "center";
+    pEmpty.classList.add("empty");
+    pEmpty.role = "status";
+    pEmpty.style.textAlign = "center";
     
 
     try {
@@ -26,19 +26,17 @@ async function getGithubUser() {
         if (!response.ok) throw new Error("could not retrieve user repositories");
         const data = await response.json();
         const reversedData = data.toReversed();
-
-        console.log(response);
-
+        
         if (data.lenght === 0) {
             pEmpty.textContent = "This user has no repositories";
             return;
         }
 
-        renderGithubData(reversedData);
+        setTimeout(renderGithubData(reversedData), 1000);
 
     } catch (error) {
         console.error("An error occurred:", error);
-        pError.innerHTML = `An error occurred: ${error}`;
+        pError.innerHTML = `<b> An error occurred: </b> the download failed, try again later`;
         ulParent.append(pError);
         
 
@@ -46,7 +44,6 @@ async function getGithubUser() {
         pLoading.style.display = "none";
     }
 }
-
 
 
 function renderGithubData(data) {
