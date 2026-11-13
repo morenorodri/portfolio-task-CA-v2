@@ -60,5 +60,11 @@ Det är trevligare användarupplevelse om användaren blir upplyst om processen.
 
 
 # Styrkor och brister
+Det som har fungerat bra i den här uppgiften är användningen av asynkrona funktioner tillsammans med `try/catch`, `finally` och `throw new`. Den har skapat stabilt flöde för felhantering och gjort enklare att skicka rätt meddelande till klienten.
+
+Om tiden hade funnits hade jag försök mig på att bygga ett grå skal, som efterliknar det färdiga innehållet som väntas dyka fram vid lyckat upphämtning av data. Denna användarupplevelser tycker jag bäst om, det ser proffsigt ut och fångar mitt nyfikenhet om vad som ska ske härnäst.
+
+Inför nästa uppgift behöver jag anteckna min ideer, tankar och dokumentera kort om vad som uppnåtts efter varje kodtillfällen i en egen skrivblock. Jag vill också ättra min användning av GitHub och dess `commit` meddelande så andra intressesanta utvecklare förstå sig på processen.
 
 # AI-vertyg
+Under mitt arbete med uppgiften använder jag AI-vertyg som läromedel. AI är min assistent med information om hur olika HTML, CSS och JavaScript-kod ska användas. Jag vill kunna skriva själva koden på egen hand och inte behöva vända mig till AI för ofta. Att vara kodare är underhållade och jag gillar de utmaningar som uppstår på vägen. Känslan av att veta att jag har klarat av skapa är tillfredställande. Det AI-vertyg som används i denna uppgift är Google Gemeni.
